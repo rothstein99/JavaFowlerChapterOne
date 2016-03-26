@@ -39,11 +39,11 @@ public class Program {
 		//Movie movie4 = new NewReleaseMovie("Divergent", Movie.NEW_RELEASE);
 		//Movie movie5 = new NewReleaseMovie("10 Cloverfield Lane", Movie.NEW_RELEASE);
 		
-		Movie movie1 = movieFactory("Deadpool", Movie.NEW_RELEASE);
-		Movie movie2 = movieFactory("Tron", Movie.CHILDRENS);
-		Movie movie3 = movieFactory("Star Wars", Movie.REGULAR);
-	   Movie movie4 = movieFactory("Divergent", Movie.NEW_RELEASE);
-		Movie movie5 = movieFactory("10 Cloverfield Lane", Movie.NEW_RELEASE);
+		Movie movie1 = MovieFactory.movieFactory("Deadpool", Movie.NEW_RELEASE);
+		Movie movie2 = MovieFactory.movieFactory("Tron", Movie.CHILDRENS);
+		Movie movie3 = MovieFactory.movieFactory("Star Wars", Movie.REGULAR);
+	   Movie movie4 = MovieFactory.movieFactory("Divergent", Movie.NEW_RELEASE);
+		Movie movie5 = MovieFactory.movieFactory("10 Cloverfield Lane", Movie.NEW_RELEASE);
 		
 		Customer customer1 = new Customer("Liver Lips");
 		Customer customer2 = new Customer("John");
@@ -76,38 +76,16 @@ public class Program {
 		String statement3 = customer3.statement();
 		
 		System.out.print(statement1);
+		System.out.print("\n\n");
 		System.out.print(statement2);
+		System.out.print("\n\n");
 		System.out.print(statement3);
 	}
 	
 	
-	public static Movie movieFactory(String title, int priceCode){
-		Movie movie = null;
-		String s = "";
-		if (priceCode==Movie.REGULAR){
-			s = "movierental.RegularMovie";
-		}
-		if (priceCode==Movie.NEW_RELEASE){
-			s = "movierental.NewReleaseMovie";
-		}
-		if (priceCode==Movie.CHILDRENS){
-			s = "movierental.ChildrensMovie";
-		}	
-		
-		try {
-			
-			movie = (Movie) Class.forName(s).newInstance();
-			movie.setTitle(title);
-			movie.setPriceCode(priceCode);
-			//tci = (NewTaxCalc) Class.forName(s).newInstance();
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return movie;
-	}
+
 }
+
 
 
 
