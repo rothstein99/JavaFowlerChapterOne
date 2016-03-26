@@ -21,25 +21,10 @@ public class CustomerStatementTest {
 		starWarsMovie = MovieFactory.create("Star Wars", Movie.REGULAR);
 	}
 	
-	@Test
-	public void getStatementForLiverLipsWithThreeRentals() {
-		Customer liverLips = new Customer("Liver Lips");
-		liverLips.addRental(new Rental(deadPoolMovie, 5));
-		liverLips.addRental(new Rental(tronMovie, 4));
-		liverLips.addRental(new Rental(starWarsMovie, 3));
-		
-		String expectedStatement = 
-				"Rental Record for Liver Lips\n"
-				+ "\tDeadpool\t15.0\n"
-				+ "\tTron\t3.0\n"
-				+ "\tStar Wars\t3.5\n"
-				+ "Amount owed is 21.5\n"
-				+ "You earned 4 frequent renter points";
-		assertEquals(expectedStatement, liverLips.statement());
-	}
+
 	
 	@Test
-	public void getAllRentalsForOneDayEach() {
+	public void getStatementAllRentalsForOneDayEach() {
 		Customer liverLips = new Customer("Liver Lips");
 		liverLips.addRental(new Rental(deadPoolMovie, 1));
 		liverLips.addRental(new Rental(tronMovie, 1));
@@ -52,6 +37,23 @@ public class CustomerStatementTest {
 				+ "\tStar Wars\t2.0\n"
 				+ "Amount owed is 6.5\n"
 				+ "You earned 3 frequent renter points";
+		assertEquals(expectedStatement, liverLips.statement());
+	}
+	
+	@Test
+	public void getStatementAllRentalsForTwoDays() {
+		Customer liverLips = new Customer("Liver Lips");
+		liverLips.addRental(new Rental(deadPoolMovie, 2));
+		liverLips.addRental(new Rental(tronMovie, 2));
+		liverLips.addRental(new Rental(starWarsMovie, 2));
+		
+		String expectedStatement = 
+				"Rental Record for Liver Lips\n"
+				+ "\tDeadpool\t6.0\n"
+				+ "\tTron\t1.5\n"
+				+ "\tStar Wars\t2.0\n"
+				+ "Amount owed is 9.5\n"
+				+ "You earned 4 frequent renter points";
 		assertEquals(expectedStatement, liverLips.statement());
 	}
 }
