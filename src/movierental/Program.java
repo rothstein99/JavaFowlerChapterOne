@@ -33,17 +33,17 @@ public class Program {
 			e.printStackTrace();
 		}
 		*/
-		Movie movie1 = new Movie("Deadpool", Movie.NEW_RELEASE);
-		Movie movie2 = new Movie("Tron", Movie.CHILDRENS);
-		Movie movie3 = new Movie("Star Wars", Movie.REGULAR);
-		Movie movie4 = new Movie("Divergent", Movie.NEW_RELEASE);
-		Movie movie5 = new Movie("10 Cloverfield Lane", Movie.NEW_RELEASE);
+		//Movie movie1 = new NewReleaseMovie("Deadpool", Movie.NEW_RELEASE);
+		//Movie movie2 = new ChildrensMovie("Tron", Movie.CHILDRENS);
+		//Movie movie3 = new RegularMovie("Star Wars", Movie.REGULAR);
+		//Movie movie4 = new NewReleaseMovie("Divergent", Movie.NEW_RELEASE);
+		//Movie movie5 = new NewReleaseMovie("10 Cloverfield Lane", Movie.NEW_RELEASE);
 		
-	//	Movie movie1 = movieFactory("Deadpool", Movie.NEW_RELEASE);
-	//	Movie movie2 = movieFactory("Tron", Movie.CHILDRENS);
-	//	Movie movie3 = movieFactory("Star Wars", Movie.REGULAR);
-	//   Movie movie4 = movieFactory("Divergent", Movie.NEW_RELEASE);
-	//	Movie movie5 = movieFactory("10 Cloverfield Lane", Movie.NEW_RELEASE);
+		Movie movie1 = movieFactory("Deadpool", Movie.NEW_RELEASE);
+		Movie movie2 = movieFactory("Tron", Movie.CHILDRENS);
+		Movie movie3 = movieFactory("Star Wars", Movie.REGULAR);
+	   Movie movie4 = movieFactory("Divergent", Movie.NEW_RELEASE);
+		Movie movie5 = movieFactory("10 Cloverfield Lane", Movie.NEW_RELEASE);
 		
 		Customer customer1 = new Customer("Liver Lips");
 		Customer customer2 = new Customer("John");
@@ -80,7 +80,7 @@ public class Program {
 		System.out.print(statement3);
 	}
 	
-	/*
+	
 	public static Movie movieFactory(String title, int priceCode){
 		Movie movie = null;
 		String s = "";
@@ -107,7 +107,6 @@ public class Program {
 		}
 		return movie;
 	}
-	*/
 }
 
 
