@@ -10,9 +10,9 @@ public class CustomerStatementTest {
 	@Test
 	public void test() {
 		Customer customer1 = new Customer("Liver Lips");
-		Movie movie1 = MovieFactory.movieFactory("Deadpool", Movie.NEW_RELEASE);
-		Movie movie2 = MovieFactory.movieFactory("Tron", Movie.CHILDRENS);
-		Movie movie3 = MovieFactory.movieFactory("Star Wars", Movie.REGULAR);
+		Movie movie1 = MovieFactory.create("Deadpool", Movie.NEW_RELEASE);
+		Movie movie2 = MovieFactory.create("Tron", Movie.CHILDRENS);
+		Movie movie3 = MovieFactory.create("Star Wars", Movie.REGULAR);
 		Rental rental1 = new Rental(movie1, 5);
 		Rental rental2 = new Rental(movie2, 4);
 		Rental rental3 = new Rental(movie3, 3);

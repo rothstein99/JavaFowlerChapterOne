@@ -39,11 +39,11 @@ public class Program {
 		//Movie movie4 = new NewReleaseMovie("Divergent", Movie.NEW_RELEASE);
 		//Movie movie5 = new NewReleaseMovie("10 Cloverfield Lane", Movie.NEW_RELEASE);
 		
-		Movie movie1 = MovieFactory.movieFactory("Deadpool", Movie.NEW_RELEASE);
-		Movie movie2 = MovieFactory.movieFactory("Tron", Movie.CHILDRENS);
-		Movie movie3 = MovieFactory.movieFactory("Star Wars", Movie.REGULAR);
-	   Movie movie4 = MovieFactory.movieFactory("Divergent", Movie.NEW_RELEASE);
-		Movie movie5 = MovieFactory.movieFactory("10 Cloverfield Lane", Movie.NEW_RELEASE);
+		Movie movie1 = MovieFactory.create("Deadpool", Movie.NEW_RELEASE);
+		Movie movie2 = MovieFactory.create("Tron", Movie.CHILDRENS);
+		Movie movie3 = MovieFactory.create("Star Wars", Movie.REGULAR);
+	   Movie movie4 = MovieFactory.create("Divergent", Movie.NEW_RELEASE);
+		Movie movie5 = MovieFactory.create("10 Cloverfield Lane", Movie.NEW_RELEASE);
 		
 		Customer customer1 = new Customer("Liver Lips");
 		Customer customer2 = new Customer("John");

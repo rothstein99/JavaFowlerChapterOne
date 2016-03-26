@@ -1,7 +1,7 @@
 package movierental;
 
 public class MovieFactory {
-	public static Movie movieFactory(String title, int priceCode){
+	public static Movie create(String title, int priceCode){
 		Movie movie = null;
 		String s = "";
 		if (priceCode==Movie.REGULAR){
