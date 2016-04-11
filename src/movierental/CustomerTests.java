@@ -1,5 +1,5 @@
 package movierental;
-
+import org.junit.Before;
 import static org.junit.Assert.*;
 import junit.framework.Assert;
 
